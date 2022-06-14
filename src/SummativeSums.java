@@ -1,12 +1,12 @@
 
 public class SummativeSums {
 
-	public static int sum(int[] xs)
+	public static long sum(int[] xs)
 	{
 		return xs[0] + sum(xs, 1);
 	}
 	
-	public static int sum(int[] xs, int index)
+	public static long sum(int[] xs, int index)
 	{
 		if(index != xs.length - 1)
 		{
