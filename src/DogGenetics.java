@@ -20,15 +20,27 @@ public class DogGenetics {
 			breedTotal += amount;
 		}
 		breedAmounts[0] = 100 - breedTotal;
-		Arrays.sort(breedAmounts);
+		Arrays.sort(breedAmounts); //For nice presentation at the output phase
+		
+		//Get name
+		System.out.println("What is your dog's name?");
+		String dogName;
+		do {
+			dogName = input.next();
+		} while(dogName.isBlank());
+		
+		System.out.println("Well then, I have this highly reliable report on " + dogName + (dogName.endsWith("s") ? "'" : "'s") + " prestigious background right here.\n" + "\n" + dogName + " is:");
 		
 		//Output breeds
 		int addedBreed = 0; //Tracks breeds to avoid duplication
-		for(int i = breedAmounts.length - 1; i >= 0 ; i--)
+		for(int i = breedAmounts.length - 1; i >= 0 ; i--) //Go backwards, to sort breeds by descending order
 		{
+			//Shifts the random bounds to avoid the last generated breed, upper bound is based on i to avoid running out of breeds as the loop progresses
 			addedBreed = rand.nextInt(addedBreed + 1, breeds.length - i);
 			System.out.println(breeds[addedBreed] + String.format(": %1.2f", breedAmounts[i]) + "%");
 		}
+		
+		System.out.println("Wowzers!");
 	}
 
 }
