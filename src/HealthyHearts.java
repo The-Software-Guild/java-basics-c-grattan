@@ -17,7 +17,13 @@ public class HealthyHearts {
 			{
 				input.next();
 			}
-		} while(age < 1); //The calculations only need an age above 0, no point sanitising for people over 200
+		} while(age < 1 && age < 180); //Max heart rate range of 219 to 40
+		
+		//Calculate and display values
+		int maxHR = 220 - age;
+		double[] targetRange = {maxHR * 0.5, maxHR * 0.85};
+		System.out.println(String.format("Your maximum heart rate should be " + maxHR + " beats per minute\n"
+				+ "Your target heart rate is between %1.0f and %2.0f BPM", targetRange[0], targetRange[1]));
 		
 		input.close();
 	}
