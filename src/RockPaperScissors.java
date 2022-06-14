@@ -97,7 +97,7 @@ public class RockPaperScissors {
 			}
 			
 			//Display results
-			System.out.println("You won " + scores[0] + " rounds, lost " + scores[1] + " rounds, and " + scores[2] + "rounds were a tie.");
+			System.out.println("You won " + scores[0] + " rounds, lost " + scores[1] + " rounds, and " + scores[2] + " rounds were a tie.");
 			if(scores[0] > scores[1])
 			{
 				System.out.println("You Won!");

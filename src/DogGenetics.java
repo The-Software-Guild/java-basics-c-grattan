@@ -29,7 +29,7 @@ public class DogGenetics {
 			dogName = input.next();
 		} while(dogName.isBlank());
 		
-		System.out.println("Well then, I have this highly reliable report on " + dogName + (dogName.endsWith("s") ? "'" : "'s") + " prestigious background right here.\n" + "\n" + dogName + " is:");
+		System.out.println("Well then, I have this highly reliable report on " + dogName + (dogName.endsWith("s") ? "'" : "'s") + " prestigious background right here!\n\n" + dogName + " is:");
 		
 		//Output breeds
 		int addedBreed = 0; //Tracks breeds to avoid duplication
@@ -40,7 +40,7 @@ public class DogGenetics {
 			System.out.println(breeds[addedBreed] + String.format(": %1.2f", breedAmounts[i]) + "%");
 		}
 		
-		System.out.println("Wowzers!");
+		System.out.println("\nWowzers!");
 	}
 
 }

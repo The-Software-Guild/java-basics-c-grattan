@@ -8,11 +8,11 @@ public class SummativeSums {
 	
 	public static int sum(int[] xs, int index)
 	{
-		if(index == xs.length - 1)
+		if(index != xs.length - 1)
 		{
-			return xs[index];
+			return xs[index] + sum(xs, index + 1);
 		}
-		return xs[index] + sum(xs, index + 1);
+		return xs[index];
 	}
 	
 	public static void main(String[] args) {
