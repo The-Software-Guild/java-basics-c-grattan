@@ -122,5 +122,7 @@ public class RockPaperScissors {
 			replayB = replay.equals("yes");
 
 		} while(replayB);
+		
+		System.out.println("Thanks for playing!");
 	}
 }
