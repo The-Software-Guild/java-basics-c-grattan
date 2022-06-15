@@ -12,7 +12,7 @@ public class RockPaperScissors {
 		return getInt(min, max);
 	}
 	
-	private static final int getInt(int min, int max)
+	private static int getInt(int min, int max)
 	{
 		int in = min;
 		do
