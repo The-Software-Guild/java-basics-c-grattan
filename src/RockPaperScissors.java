@@ -12,7 +12,7 @@ public class RockPaperScissors {
 		return getInt(min, max);
 	}
 	
-	private static int getInt(int min, int max)
+	private static final int getInt(int min, int max)
 	{
 		int in = min;
 		do
@@ -77,7 +77,7 @@ public class RockPaperScissors {
 			//Main game loop
 			for(int i = 0; i < rounds; i++)
 			{
-				int choice = getInt(-1, 3, "Choose your weapon (0: rock, 1: paper, 2: scissors):");
+				int choice = getInt(0, 2, "Choose your weapon (0: rock, 1: paper, 2: scissors):");
 				System.out.println("You have chosen " + getChoice(choice));
 				
 				int compChoice = rand.nextInt(3);
