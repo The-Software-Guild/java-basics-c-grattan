@@ -65,7 +65,7 @@ public class RockPaperScissors {
 	
 	public static void main(String[] args)
 	{
-		boolean replayB;
+		String replay;
 		do
 		{
 			//Get number of rounds
@@ -112,17 +112,13 @@ public class RockPaperScissors {
 			}
 			
 			//Replay handling
-			String replay = "";
-			
 			System.out.println("Do you want to play again? (Yes/No)");
 			do
 			{
 				replay = input.next().toLowerCase();
 			} while(!(replay.equals("yes") || replay.equals("no")));
-			
-			replayB = replay.equals("yes");
 
-		} while(replayB);
+		} while(replay.equals("yes"));
 		
 		System.out.println("Thanks for playing!");
 	}
